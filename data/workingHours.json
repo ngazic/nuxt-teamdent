@@ -1,0 +1,35 @@
+{
+  "workingTime": {
+    "title": "Radno vrijeme:",
+    "number": "030 251 231"
+    },
+    "days": [{ 
+      "day": "Poned.",
+      "time": "08:00 - 20:00"
+    },
+    {
+      "day": "Utorak",
+      "time": "08:00 - 20:00"
+    },
+    {
+      "day": "Srijeda",
+      "time": "08:00 - 20:00"
+    },
+    {
+      "day": "Četvrtak",
+      "time": "08:00 - 20:00"
+    },
+    {
+      "day": "Petak",
+      "time": "08:00 - 20:00"
+    },
+    {
+      "day": "Subota",
+      "time": "08:00 - 15:00"
+    },
+    {
+      "day": "Nedjelja",
+      "time": "Zatvoreno"
+    }
+  ]
+}

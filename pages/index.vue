@@ -9,6 +9,9 @@
       :headline2="post.hero.headline2"
       :location="post.hero.location"
     />
+    <section class="container relative mx-auto px-4 md:px-0">
+      <WorkingHours />
+    </section>
   </div>
 </template>
 

@@ -98,9 +98,6 @@ export default {
   },
   mounted() {
     this.slider = new Swiper(this.$refs.mySlider, this.mySliderOptions)
-    console.log('hero mounted event')
-    console.log(this.slides)
-    console.log(this.$refs.mySlider)
   },
   beforeDestroy() {
     this.slider.destroy(true, true)
