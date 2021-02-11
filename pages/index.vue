@@ -3,7 +3,12 @@
     <h1>Fetching content from the md files</h1>
     <h2>{{ post.title }}</h2>
     <nuxt-content :document="post" />
-    <Hero :img="post.image" />
+    <Hero
+      :slides="post.hero.items"
+      :headline="post.hero.headline"
+      :headline2="post.hero.headline2"
+      :location="post.hero.location"
+    />
   </div>
 </template>
 
