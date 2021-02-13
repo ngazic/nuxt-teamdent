@@ -1,0 +1,32 @@
+{
+  "aboutUs": {
+    "headline": "O nama",
+    "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+  },
+  "copyRight": {
+    "text": "All Rights Reserved"
+  },
+  "ourLocation": {
+    "text": "Naša lokacija"
+  },
+  "followUs": {
+    "text": "Kontaktirajte nas"
+  },
+  "address": {
+    "headline": "Adresa:",
+    "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    "text2": "Bosnia and Herzegovina"
+  },
+  "telephone": {
+    "text": "Telefon:",
+    "number": "062 803 293"
+  },
+  "email": {
+    "text": "E-mail:",
+    "email": "Lorem Ipsum"
+  },
+  "socialShare": {
+    "facebook": "https://www.facebook.com/",
+    "location": "#contact"
+  }
+}

@@ -1,16 +1,16 @@
 <template>
   <div>
-    <h1>Fetching content from the md files</h1>
-    <h2>{{ post.title }}</h2>
-    <nuxt-content :document="post" />
     <Hero
       :slides="post.hero.items"
       :headline="post.hero.headline"
       :headline2="post.hero.headline2"
       :location="post.hero.location"
     />
-    <section class="container relative mx-auto px-4 md:px-0">
-      <WorkingHours />
+    <section id="about-us">
+      <section class="container relative mx-auto px-4 md:px-0">
+        <WorkingHours />
+      </section>
+      <AboutUs :data="post.aboutUs" />
     </section>
   </div>
 </template>
@@ -32,3 +32,8 @@ export default {
   },
 }
 </script>
+<style>
+p.content {
+  white-space: pre-wrap;
+}
+</style>
