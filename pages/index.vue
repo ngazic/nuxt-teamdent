@@ -12,6 +12,9 @@
       </section>
       <AboutUs :data="post.aboutUs" />
     </section>
+    <section id="team-dent" class="overflow-x-hidden">
+      <TeamMembers :team-dent="post.teamDent" />
+    </section>
   </div>
 </template>
 

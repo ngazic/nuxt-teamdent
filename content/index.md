@@ -16,7 +16,7 @@ hero:
       alt: alt
     - image: /media/uploads/1646212.svg
       alt: Strelica brdu
-teamdent:
+teamDent:
   title: Naš tim
   items:
     - employee: Lorem Simply
