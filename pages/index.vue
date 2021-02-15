@@ -18,6 +18,16 @@
     <section id="team-dent" class="overflow-x-hidden">
       <TeamMembers :team-dent="post.teamDent" />
     </section>
+    <section id="photos">
+      <Slider :data="post.slider" />
+      <div class="container mx-auto mb-20 md:mb-28">
+        <nuxt-link
+          to="galerija"
+          class="max-w-xs flex justify-center mx-auto text-white font-bold bg-blue-400 border-0 py-2 px-6 mb-10 md:mb-0 rounded text-lg uppercase hover:bg-blue-700 w-full button--submit transition duration-700 ease-in-out"
+          >Pogledaj više</nuxt-link
+        >
+      </div>
+    </section>
   </div>
 </template>
 

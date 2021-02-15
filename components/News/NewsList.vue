@@ -32,9 +32,5 @@ export default {
       type: String,
     },
   },
-  created() {
-    console.log('thsi is mounted')
-    console.log(this.data)
-  },
 }
 </script>

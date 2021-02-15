@@ -54,9 +54,5 @@ export default {
       type: Object,
     },
   },
-  mounted() {
-    console.log('mounterd of news items')
-    console.log(this.news)
-  },
 }
 </script>

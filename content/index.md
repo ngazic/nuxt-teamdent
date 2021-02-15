@@ -91,6 +91,4 @@ slider:
       image: /media/uploads/dentist2.jpg
     - alt: alt
       image: /media/uploads/dentist3.jpg
-    - alt: alt
-      image: /media/uploads/hugo.jpg
 ---
