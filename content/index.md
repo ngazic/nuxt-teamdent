@@ -50,6 +50,7 @@ teamDent:
         of Letraset sheets containing Lorem Ipsum passages, and more recently
         with desktop publishing software like Aldus PageMake.
       image: /media/uploads/dentist2.jpg
+newsTitle: Vijesti
 aboutUs:
   banner: /media/uploads/banner2.jpg
   title: About us title
