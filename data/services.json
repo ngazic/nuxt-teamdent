@@ -1,0 +1,57 @@
+{
+  "ourServices": {
+    "title": "Naše usluge",
+    "items": [
+      {
+        "headline": "Profesionalno čišćenje zuba",
+        "text": "Skidanje naslaga zubnog kamenca ultrazvučnim aparatom. 2. Odstranjivanje nedostupnih naslaga i pigmentacija (nastale uslijed pušenja) zuba. 3. Poliranje zubnih nizova interdentalnim trakicama i polirajućim gumicama uz upotrebu paste za poliranje.",
+        "icon": "/media/uploads/clean.png",
+        "alt": "alt"
+      },
+      {
+        "headline": "Oralna hirurgija",
+        "text": "Operativno vađenje impaktiranih zuba Apikotomija Plastika sinusa Hirurgija mekog tkiva Incizija Komplikovano vađenje i separacija Vađenje umnjaka",
+        "icon": "/media/uploads/anesthetic.png",
+        "alt": "alt"
+      },
+      {
+        "headline": "Stomatološka protetika",
+        "text": "Fiksna protetika- krunice i mostovi Mobilna protetika- Parcijalne i totalne proteze",
+        "icon": "/media/uploads/teeth-open.png",
+        "alt": "alt"
+      },
+      {
+        "headline": "Ortodoncija-korekcija zuba i zagriza",
+        "text": "Imate anomalije u postavi i rastu zuba? Mi imamo rješenje za vas.",
+        "icon": "/media/uploads/dental-care.png",
+        "alt": "alt"
+      },
+      {
+        "headline": "Estetska stomatologija",
+        "text": "Nudimo usluge korigovanja svakog problema na polju estetske stomatologije,ukoliko Vam nedostaje zub,mi ćemo Vam nadoknaditi. Zubni nakit predstavlja odličan način da se ljepota vaših zuba još više istakne!",
+        "icon": "/media/uploads/care.png",
+        "alt": "alt"
+      },
+      {
+        "headline": "Dentalna implantologija",
+        "text": "U slučaju nedostatka zuba,ugradnja implantata ima prednost budući da se susjedni zubi ne moraju brusiti,oni služe kao nosači budućeg mosta ili krunice. Postupak je jednostavniji i ugodniji za pacijenta.",
+        "icon": "/media/uploads/dental-implant.png",
+        "alt": "alt"
+      }
+    ],
+    "additionalItems": [
+      {
+        "headline": "Lorem Ipsumcsadsads",
+        "text": "Lorem Ipsum is simply dummy text ofdsadsasads",
+        "icon": "/media/icons/logo-m.png",
+        "alt": "alt"
+      },
+      {
+        "headline": "Lorem Ipsumcsadsads",
+        "text": "Lorem Ipsum is simply dummy text ofdsadsasads sadssads",
+        "icon": "/media/icons/Paypal.png",
+        "alt": "alt"
+      }
+    ]
+  }
+}

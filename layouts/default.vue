@@ -5,3 +5,9 @@
     <TheFooter />
   </div>
 </template>
+
+<style>
+:root {
+  scroll-behavior: smooth;
+}
+</style>
