@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Foto</h1>
+    <h1>This is vijesti page</h1>
   </div>
 </template>
 

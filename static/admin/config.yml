@@ -1,0 +1,76 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: main
+  squash_merges: true
+
+# display_url:
+logo_url: /media/brand/logo.svg
+media_folder: "static/media/uploads"
+public_folder: "/media/uploads"
+# publish_mode: editorial_workflow
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+collections:
+   - name: pages
+    label: Stranice
+    editor:
+      preview: false
+    files:
+      - label: Početna stranica
+        name: home
+        file: content/index.md
+        fields:
+          - label: Početni slider
+            name: hero
+            widget: object
+            fields:
+              - {label: "Naslov", name: "headline", widget: "string"}
+              - {label: "Podnaslov", name: "headline2", widget: "string"}
+              - {label: "Lokacija", name: "location", widget: "string"}
+              - label: Fotografije
+                name: items
+                widget: list
+                label_singular: Fotografiju
+                fields:
+                  - {label: "Slika", name: "image", widget: "image"}
+                  - {label: "Alternativni tekst", name: "alt", widget: "string"}
+          - label: O nama
+            name: aboutUs
+            widget: object
+            fields:
+              - {label: "Slika", name: "banner", widget: "image"}
+              - {label: "Naslov", name: "title", widget: "string"}
+              - {label: "Text", name: "content", widget: "text"}
+          - label: Naš tim
+            name: teamdent
+            widget: object
+            fields:
+              - {label: "Naslov", name: "title", widget: "string"}
+              - label: Zaposleni
+                name: items
+                widget: list
+                label_singular: Zaposlenik
+                fields:
+                  - {label: "Ime i Prezime", name: "employee", widget: "string"}
+                  - {label: "Text", name: "aboutEmployee", widget: "text"}
+                  - {label: "Slika", name: "image", widget: "image"}
+          - label: Izdvojene fotografije
+            name: slider
+            widget: object
+            fields:
+              - {label: "Naslov", name: "title", widget: "string"}
+              - label: Slike
+                name: items
+                widget: list
+                label_singlular: Sliku
+                fields:
+                  - {label: "URL/Slika", name: "url", widget: "image"}
+                  - {label: "Alt opis", name: "title", widget: "string"}
+
+
+
+
