@@ -15,11 +15,11 @@
     "@nuxt/content": "^1.13.0",
     "autoprefixer": "^9.8.6",
     "core-js": "^3.8.3",
-    "lightgallery.js": "^1.4.0",
     "nuxt": "^2.14.12",
     "postcss": "^7.0.35",
     "swiper": "^6.4.11",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
+    "vue-light-gallery": "^1.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",

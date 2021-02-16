@@ -1,5 +1,13 @@
 <template>
   <section class="slider mb-10">
+    <client-only>
+      <LightGallery
+        :disable-scroll="true"
+        :images="data.items"
+        :index="index"
+        @close="index = null"
+      />
+    </client-only>
     <div class="bg-blue-400">
       <h2
         class="container mx-auto text-center md:text-left text-3xl text-white font-sans font-bold p-5 md:pb-10 md:pt-10 md:pl-0"
@@ -11,16 +19,17 @@
       <div ref="mySlider" class="swiper-container">
         <div class="swiper-wrapper gallery__items">
           <a
-            v-for="(item, index) in data.items"
-            :key="index"
+            v-for="(item, indx) in data.items"
+            :key="indx"
             :href="item.video"
             class="swiper-slide text-white"
+            @click="clickHandler(indx)"
           >
             <img
               v-if="item.video"
               class="w-full object-cover object-center h-72 md:h-96"
-              :src="item.img"
-              :alt="item.alt"
+              :src="item.url"
+              :alt="item.title"
               width="520"
               height="420"
             />
@@ -49,9 +58,8 @@
             <img
               v-else
               class="w-full object-cover object-center swiper-lazy h-72 md:h-96"
-              :data-src="item.image"
-              :src="item.image"
-              :alt="item.alt"
+              :data-src="item.url"
+              :alt="item.title"
               width="520"
               height="420"
             />
@@ -74,6 +82,7 @@ export default {
   },
   data() {
     return {
+      index: null,
       slider: null,
       mySliderOptions: {
         slidesPerView: 1.2,
@@ -112,6 +121,12 @@ export default {
         },
       },
     }
+  },
+  methods: {
+    clickHandler(indx) {
+      console.log('clicked' + indx)
+      this.index = indx
+    },
   },
   mounted() {
     this.slider = new Swiper(this.$refs.mySlider, this.mySliderOptions)

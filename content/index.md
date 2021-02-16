@@ -79,16 +79,16 @@ aboutUs:
 slider:
   title: Izdvojeno
   items:
-    - alt: alt
-      image: /media/uploads/banner2.jpg
-    - alt: alt
-      image: /media/uploads/dental-i.jpg
-    - image: /media/uploads/dental-i2.jpg
-      alt: alt
-    - alt: alt
-      image: /media/uploads/dentist.jpg
-    - alt: alt
-      image: /media/uploads/dentist2.jpg
-    - alt: alt
-      image: /media/uploads/dentist3.jpg
+    - title: title
+      url: /media/uploads/banner2.jpg
+    - title: title
+      url: /media/uploads/dental-i.jpg
+    - url: /media/uploads/dental-i2.jpg
+      title: title
+    - title: title
+      url: /media/uploads/dentist.jpg
+    - title: title
+      url: /media/uploads/dentist2.jpg
+    - title: title
+      url: /media/uploads/dentist3.jpg
 ---
