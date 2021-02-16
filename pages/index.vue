@@ -61,6 +61,16 @@ export default {
       vijesti,
     }
   },
+  mounted() {
+    // eslint-disable-next-line no-undef
+    AOS.init({
+      once: true,
+    })
+    // eslint-disable-next-line no-undef
+    console.log(lightGallery)
+    // eslint-disable-next-line no-undef
+    lightGallery(this.$el.querySelector('.gallery__items'))
+  },
 }
 </script>
 <style>

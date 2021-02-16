@@ -32,15 +32,12 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href:
-          'https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css',
-        crossorigin: 'anonymous',
+        href: 'https://unpkg.com/aos@2.3.1/dist/aos.css',
       },
     ],
     script: [
       {
-        src:
-          'https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js',
+        src: 'https://unpkg.com/aos@2.3.1/dist/aos.js',
         body: true,
       },
     ],
