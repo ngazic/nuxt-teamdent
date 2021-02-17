@@ -33,12 +33,12 @@ collections:
     fields:
       - {label: "Naslov", name: "title", widget: "string"}
       - {
-          label: Slika, 
+          label: Slika,
           name: image,
           widget: object,
           fields: [
             {label: "URL/Slika", name: "src", widget: "image"},
-            {label: "Alt text", name: "alt", widget: "string"} 
+            {label: "Alt text", name: "alt", widget: "string"}
           ]
 
         }
@@ -53,7 +53,7 @@ collections:
       }
       - {label: "Content", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "hidden", default: ["article"]}
-  
+
   - name: pages
     label: Stranice
     editor:
@@ -61,12 +61,12 @@ collections:
     files:
       - label: Početna stranica
         name: home
-        file: content/_index.md
+        file: content/index.md
         fields:
           - label: Početni slider
             name: hero
             widget: object
-            fields: 
+            fields:
               - {label: "Naslov", name: "headline", widget: "string"}
               - {label: "Podnaslov", name: "headline2", widget: "string"}
               - {label: "Lokacija", name: "location", widget: "string"}
@@ -80,20 +80,20 @@ collections:
           - label: O nama
             name: aboutUs
             widget: object
-            fields: 
+            fields:
               - {label: "Slika", name: "banner", widget: "image"}
               - {label: "Naslov", name: "title", widget: "string"}
               - {label: "Text", name: "content", widget: "text"}
           - label: Naš tim
             name: teamdent
             widget: object
-            fields: 
+            fields:
               - {label: "Naslov", name: "title", widget: "string"}
               - label: Zaposleni
                 name: items
                 widget: list
                 label_singular: Zaposlenik
-                fields: 
+                fields:
                   - {label: "Ime i Prezime", name: "employee", widget: "string"}
                   - {label: "Text", name: "aboutEmployee", widget: "text"}
                   - {label: "Slika", name: "image", widget: "image"}
@@ -106,13 +106,13 @@ collections:
                 name: items
                 widget: list
                 label_singlular: Sliku
-                fields: 
-                  - {label: "URL/Slika", name: "image", widget: "image"}
-                  - {label: "Alt opis", name: "alt", widget: "string"}
-                         
+                fields:
+                  - {label: "URL/Slika", name: "url", widget: "image"}
+                  - {label: "Alt opis", name: "title", widget: "string"}
+
       - label: Galerija
         name: galerija
-        file: content/galerija/_index.md
+        file: content/galerija/index.md
         fields:
           - label: Galerija
             name: gallery
@@ -154,7 +154,7 @@ collections:
           - label: Radno vrijeme
             name: workingTime
             widget: object
-            fields: 
+            fields:
               - {label: "Naslov", name: "title", widget: "string"}
               - {label: "Broj", name: "number", widget: "string"}
           - label: Dani
@@ -171,7 +171,7 @@ collections:
           - label: Naše usluge
             name: ourServices
             widget: object
-            fields: 
+            fields:
               - {label: "Naslov", name: "title", widget: "string"}
               - label: Usluge
                 name: items
@@ -199,42 +199,41 @@ collections:
           - label: O nama
             name: aboutUs
             widget: object
-            fields: 
+            fields:
               - {label: "Naslov", name: "title", widget: "string"}
               - {label: "Text", name: "text", widget: "string"}
           - label: Copyright
             name: copyRight
             widget: object
-            fields: 
+            fields:
               - {label: "Text", name: "text", widget: "string"}
           - label: Kontaktirajte nas
             name: followUs
             widget: object
-            fields: 
+            fields:
               - {label: "Text", name: "text", widget: "string"}
           - label: Adresa
             name: address
             widget: object
-            fields: 
+            fields:
               - {label: "Naslov", name: "headline", widget: "string"}
               - {label: "Text1", name: "text", widget: "string"}
               - {label: "Text2", name: "text2", widget: "string"}
           - label: Telefon
             name: telephone
             widget: object
-            fields: 
+            fields:
               - {label: "Text", name: "text", widget: "string"}
               - {label: "Broj", name: "number", widget: "string"}
           - label: E-mail
             name: email
             widget: object
-            fields: 
+            fields:
               - {label: "Text", name: "text", widget: "string"}
               - {label: "Broj", name: "email", widget: "string"}
           - label: Dijeli na
             name: socialShare
             widget: object
-            fields: 
+            fields:
               - {label: "Facebook", name: "facebook", widget: "string"}
-             
-      
+

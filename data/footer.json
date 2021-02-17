@@ -1,7 +1,8 @@
 {
   "aboutUs": {
     "headline": "O nama",
-    "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+    "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    "title": "Title"
   },
   "copyRight": {
     "text": "All Rights Reserved"
@@ -14,7 +15,7 @@
   },
   "address": {
     "headline": "Adresa:",
-    "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    "text": "Some text for footer",
     "text2": "Bosnia and Herzegovina"
   },
   "telephone": {

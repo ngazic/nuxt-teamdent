@@ -4,7 +4,7 @@ menus:
   main:
     weight: 10
 hero:
-  headline: Dobro došli to TD
+  headline: Dobro došli
   headline2: Team dent website
   location: Nalazimo se 28 travnik Travnik
   items:
