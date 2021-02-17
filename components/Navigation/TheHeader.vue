@@ -37,7 +37,7 @@
           <li>
             <nuxt-link
               class="md:p-4 py-3 px-2 block border-b md:border-none font-sans font-semibold text-black uppercase text-base tracking-wide"
-              to="/foto"
+              to="/"
               >Foto</nuxt-link
             >
           </li>

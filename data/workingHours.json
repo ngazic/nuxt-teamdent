@@ -2,9 +2,10 @@
   "workingTime": {
     "title": "Radno vrijeme:",
     "number": "030 251 231"
-    },
-    "days": [{ 
-      "day": "Poned.",
+  },
+  "days": [
+    {
+      "day": "MOnday",
       "time": "08:00 - 20:00"
     },
     {

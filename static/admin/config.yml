@@ -15,19 +15,58 @@ slug:
   clean_accents: true
 
 collections:
-   - name: pages
+  - name: "vijesti"
+    label: "Vijesti"
+    label_singular: "vijest"
+    folder: "content/vijesti"
+    create: true
+    slug: "{{slug}}"
+
+    # This is hack to remove index.md from the list. Add tag "article" to all articles except the index, and show only pages with this tag.
+    filter: {field: "tags", value: "article"}
+
+    # Enable this for a prewiew on the right when editing. You will have to create a preview template for it to make sense.
+    editor:
+      preview: false
+
+    # more about widgets: https://www.netlifycms.org/docs/widgets/
+    fields:
+      - {label: "Naslov", name: "title", widget: "string"}
+      - {
+          label: Slika, 
+          name: image,
+          widget: object,
+          fields: [
+            {label: "URL/Slika", name: "src", widget: "image"},
+            {label: "Alt text", name: "alt", widget: "string"} 
+          ]
+
+        }
+      - {
+        label: "Vrijeme",
+        name: "date",
+        widget: "datetime",
+        default: "",
+        format: "Y-MM-DDThh:mm:ssZ",
+        picker_utc: false,
+        timeFormat: true,
+      }
+      - {label: "Content", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: ["article"]}
+  
+  - name: pages
     label: Stranice
     editor:
       preview: false
     files:
       - label: Početna stranica
         name: home
-        file: content/index.md
+        file: content/_index.md
         fields:
           - label: Početni slider
             name: hero
             widget: object
-            fields:
+            fields: 
               - {label: "Naslov", name: "headline", widget: "string"}
               - {label: "Podnaslov", name: "headline2", widget: "string"}
               - {label: "Lokacija", name: "location", widget: "string"}
@@ -41,20 +80,20 @@ collections:
           - label: O nama
             name: aboutUs
             widget: object
-            fields:
+            fields: 
               - {label: "Slika", name: "banner", widget: "image"}
               - {label: "Naslov", name: "title", widget: "string"}
               - {label: "Text", name: "content", widget: "text"}
           - label: Naš tim
             name: teamdent
             widget: object
-            fields:
+            fields: 
               - {label: "Naslov", name: "title", widget: "string"}
               - label: Zaposleni
                 name: items
                 widget: list
                 label_singular: Zaposlenik
-                fields:
+                fields: 
                   - {label: "Ime i Prezime", name: "employee", widget: "string"}
                   - {label: "Text", name: "aboutEmployee", widget: "text"}
                   - {label: "Slika", name: "image", widget: "image"}
@@ -67,10 +106,135 @@ collections:
                 name: items
                 widget: list
                 label_singlular: Sliku
+                fields: 
+                  - {label: "URL/Slika", name: "image", widget: "image"}
+                  - {label: "Alt opis", name: "alt", widget: "string"}
+                         
+      - label: Galerija
+        name: galerija
+        file: content/galerija/_index.md
+        fields:
+          - label: Galerija
+            name: gallery
+            widget: object
+            fields:
+              - {label: "Naslov", name: "headline", widget: "string"}
+              - label: Fotografije
+                name: images
+                widget: list
+                label_singular: Fotografiju
                 fields:
-                  - {label: "URL/Slika", name: "url", widget: "image"}
-                  - {label: "Alt opis", name: "title", widget: "string"}
+                  - {label: "Slika", name: "image", widget: "image"}
+                  - {label: "Alternativni tekst", name: "alt", widget: "string"}
 
-
-
-
+  - name: general
+    label: Generalne postavke
+    editor:
+      preview: false
+    files:
+      - label: Site settings
+        name: site-settings
+        file: config.toml
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Google Analytics ID"
+            name: "googleAnalytics"
+            widget: "string"
+          - label: "Params"
+            name: "params"
+            widget: "object"
+            fields:
+              - {label: "Description", name: "description", widget: "string"}
+      - label: Radno vrijeme
+        name: workHours
+        file: data/workingHours.json
+        fields:
+          - label: Radno vrijeme
+            name: workingTime
+            widget: object
+            fields: 
+              - {label: "Naslov", name: "title", widget: "string"}
+              - {label: "Broj", name: "number", widget: "string"}
+          - label: Dani
+            name: days
+            widget: list
+            label_singular: Dan i vrijeme
+            fields:
+              - {label: "Day", name: "day", widget: "string"}
+              - {label: "Vrijeme", name: "time", widget: "string"}
+      - label: Usluge
+        name: services
+        file: data/services.json
+        fields:
+          - label: Naše usluge
+            name: ourServices
+            widget: object
+            fields: 
+              - {label: "Naslov", name: "title", widget: "string"}
+              - label: Usluge
+                name: items
+                widget: list
+                label_singular: Usluga
+                fields:
+                  - {label: "Naslov", name: "headline", widget: "string"}
+                  - {label: "Text", name: "text", widget: "text"}
+                  - {label: "Ikona", name: "icon", widget: "image"}
+                  - {label: "Alt opis", name: "alt", widget: "string"}
+      - label: Cookies
+        name: cookies
+        file: data/cookies.json
+        fields:
+          - {label: "Text", name: "text", widget: "string"}
+          - label: Button
+            name: button
+            widget: object
+            fields:
+              - {label: "Text", name: "text", widget: "string"}
+      - label: Footer
+        name: footer
+        file: data/footer.json
+        fields:
+          - label: O nama
+            name: aboutUs
+            widget: object
+            fields: 
+              - {label: "Naslov", name: "title", widget: "string"}
+              - {label: "Text", name: "text", widget: "string"}
+          - label: Copyright
+            name: copyRight
+            widget: object
+            fields: 
+              - {label: "Text", name: "text", widget: "string"}
+          - label: Kontaktirajte nas
+            name: followUs
+            widget: object
+            fields: 
+              - {label: "Text", name: "text", widget: "string"}
+          - label: Adresa
+            name: address
+            widget: object
+            fields: 
+              - {label: "Naslov", name: "headline", widget: "string"}
+              - {label: "Text1", name: "text", widget: "string"}
+              - {label: "Text2", name: "text2", widget: "string"}
+          - label: Telefon
+            name: telephone
+            widget: object
+            fields: 
+              - {label: "Text", name: "text", widget: "string"}
+              - {label: "Broj", name: "number", widget: "string"}
+          - label: E-mail
+            name: email
+            widget: object
+            fields: 
+              - {label: "Text", name: "text", widget: "string"}
+              - {label: "Broj", name: "email", widget: "string"}
+          - label: Dijeli na
+            name: socialShare
+            widget: object
+            fields: 
+              - {label: "Facebook", name: "facebook", widget: "string"}
+             
+      
