@@ -7,4 +7,8 @@ date: 2021-02-04T03:53:37+01:00
 tags:
   - article
 ---
-Asd
+Seki is son of seval
+
+
+
+<my-button href="/home" target="_blank" extraClass="gazaq" >Test</my-button>
