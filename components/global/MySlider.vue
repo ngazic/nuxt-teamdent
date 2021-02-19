@@ -1,12 +1,14 @@
 <template>
   <section class="slider mb-10">
-    <div class="bg-blue-400">
-      <h2
-        class="container mx-auto text-center md:text-left text-3xl text-white font-sans font-bold p-5 md:pb-10 md:pt-10 md:pl-0"
-      >
-        My Slider
-      </h2>
-    </div>
+    <client-only>
+      <LightGallery
+        :disable-scroll="true"
+        :images="items"
+        :index="index"
+        :background="'rgba(0, 0, 0, 1)'"
+        @close="closeLightBox"
+      />
+    </client-only>
     <div class="container mx-auto pt-20 md:pb-10 md:pt-28">
       <div ref="mySlider" class="swiper-container">
         <div class="swiper-wrapper gallery__items">
@@ -15,7 +17,7 @@
             :key="indx"
             :href="item.url"
             class="swiper-slide text-white"
-            @click="clickHandler(indx)"
+            @click.prevent="showLightBox(indx)"
           >
             <img
               class="w-full object-cover object-center swiper-lazy h-72 md:h-96"
@@ -39,19 +41,6 @@ export default {
   props: {
     slides: {
       type: String,
-    },
-  },
-  computed: {
-    items() {
-      const slides = this.slides.split(',')
-      const items = []
-      console.log(slides)
-      slides.forEach((item) => {
-        console.log(item)
-        const temp = item.split('|')
-        items.push({ url: temp[0], title: temp[1] })
-      })
-      return items
     },
   },
   data() {
@@ -96,18 +85,32 @@ export default {
       },
     }
   },
-  methods: {
-    clickHandler(indx) {
-      console.log('clicked' + indx)
-      this.index = indx
+  computed: {
+    items() {
+      const slides = this.slides.split(',')
+      const items = []
+      slides.forEach((item) => {
+        const temp = item.split('|')
+        items.push({ url: temp[0], title: temp[1] })
+      })
+      return items
     },
-  },
-  mounted() {
-    console.log(this.slides)
-    this.slider = new Swiper(this.$refs.mySlider, this.mySliderOptions)
   },
   beforeDestroy() {
     this.slider.destroy(true, true)
+  },
+  mounted() {
+    this.slider = new Swiper(this.$refs.mySlider, this.mySliderOptions)
+  },
+  methods: {
+    showLightBox(ind) {
+      this.index = ind
+      this.slider.autoplay.stop()
+    },
+    closeLightBox() {
+      this.index = null
+      // this.slider.autoplay.start()
+    },
   },
 }
 </script>

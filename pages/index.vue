@@ -51,7 +51,10 @@ export default {
       post = await $content(params.slug || 'index').fetch()
       // OR const article = await $content(`articles/${params.slug}`).fetch()
       // fetch only 5 articles
-      vijesti = await $content('vijesti').limit(4).fetch()
+      vijesti = await $content('vijesti')
+        .sortBy('date', 'desc')
+        .limit(4)
+        .fetch()
     } catch (e) {
       error({ message: 'Blog Post not found' })
     }

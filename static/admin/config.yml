@@ -112,20 +112,16 @@ collections:
 
       - label: Galerija
         name: galerija
-        file: content/galerija/index.md
+        file: content/galerija.md
         fields:
-          - label: Galerija
-            name: gallery
-            widget: object
+          - {label: "Naslov", name: "headline", widget: "string"}
+          - label: Fotografije
+            name: images
+            widget: list
+            label_singular: Fotografiju
             fields:
-              - {label: "Naslov", name: "headline", widget: "string"}
-              - label: Fotografije
-                name: images
-                widget: list
-                label_singular: Fotografiju
-                fields:
-                  - {label: "Slika", name: "image", widget: "image"}
-                  - {label: "Alternativni tekst", name: "alt", widget: "string"}
+              - {label: "Slika", name: "url", widget: "image"}
+              - {label: "Alternativni tekst", name: "title", widget: "string"}
 
   - name: general
     label: Generalne postavke
@@ -236,4 +232,5 @@ collections:
             widget: object
             fields:
               - {label: "Facebook", name: "facebook", widget: "string"}
+
 

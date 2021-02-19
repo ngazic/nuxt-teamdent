@@ -122,17 +122,16 @@ export default {
       },
     }
   },
-  methods: {
-    clickHandler(indx) {
-      console.log('clicked' + indx)
-      this.index = indx
-    },
-  },
   mounted() {
     this.slider = new Swiper(this.$refs.mySlider, this.mySliderOptions)
   },
   beforeDestroy() {
     this.slider.destroy(true, true)
+  },
+  methods: {
+    clickHandler(indx) {
+      this.index = indx
+    },
   },
 }
 </script>

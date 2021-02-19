@@ -19,7 +19,7 @@ export default {
     let news
     try {
       // OR const article = await $content(`articles/${params.slug}`).fetch()
-      news = await $content('vijesti').fetch()
+      news = await $content('vijesti').sortBy('date', 'desc').fetch()
     } catch (e) {
       error({ message: 'Blog Post not found' })
     }
